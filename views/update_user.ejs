@@ -14,30 +14,29 @@
                 <h2 class="text-dark">update User</h2>
                 <span class="text-light">update a new user </span>
             </div>
-            <!-- add user form 
-            <%-include("include/_form")%> -->
+            <!-- add user form -->
                         <!-- form handling -->
-                        <form action="/" method="POST" id="update_user">
+                        <form method="POST" id="update_user">
                             <div class="new_user">
                                <div class="form-group">
                                 <label for="name" class="text-light">Name</label>
-                                <input type="hidden" name="id" value="">
-                                <input type="text" name="name" value="" placeholder="name name">
+                                <input type="hidden" name="id" value="<%=user._id%>">
+                                <input type="text" name="name" value="<%=user.name%>" placeholder="name name">
                                </div>
                                <div class="form-group">
                                 <label for="Email" class="text-light">Email</label>
-                                <input type="text" name="email" value="" placeholder="name@name.com">
+                                <input type="text" name="email" value="<%=user.email%>" placeholder="name@name.com">
                                </div>
                                <div class="form-group">
                                 <label for="Department" class="text-light">Department</label>
-                                <input type="text" name="department" value="" placeholder="science">
+                                <input type="text" name="department" value="<%=user.department%>" placeholder="science">
                                </div>
                                <div class="form-group">
                                 <label for="Salary" class="text-light">Salary</label>
-                                <input type="text" name="salary" value="" placeholder="salary">
+                                <input type="text" name="salary" value="<%=user.salary%>" placeholder="salary">
                                </div>
                                <div class="form-group">
-                                <button type="submit" class="btn text-dark-update">Save</button>  
+                                <button type="submit" class="btn text-dark update">Save</button>  
                             </div>
                             </div>
                         </form>

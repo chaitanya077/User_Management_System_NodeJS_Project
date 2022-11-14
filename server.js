@@ -34,19 +34,6 @@ app.use('/css',express.static(PATH.resolve(__dirname,"assets/css")))
 app.use('/img',express.static(PATH.resolve(__dirname,"assets/img")))
 app.use('/js',express.static(PATH.resolve(__dirname,"assets/js")))
 
-// app.get("/", (req, res) => {
-// //   res.send("crud appilication");
-// res.render("index");
-// });
-
-// app.get("/add-user", (req, res) => {
-// res.render("add_user");
-// });
-
-// app.get("/update-user", (req, res) => {
-// res.render("update_user");
-// });
-
 //load routers
 app.use("/", require("./server/routes/router"));
 

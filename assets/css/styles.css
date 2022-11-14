@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
 
 :root{
-    --dark: #2b2d42;
-    --light: #adb5bd;
+    --dark: #783937FF;
+    --light: #F1AC88FF;
     --border: #dee2e6;
-    --border-btn: #edf2f4;
+    --border-btn: rgb(104, 44, 42);
+    --btn-colors:rgb(241, 79, 65);
 }
 
 * {
@@ -44,6 +45,7 @@ a {
 .border-shadow{
     border: 1px solid var(--border-btn);
     box-shadow: 1px 3px 10px #e9ecef;
+    border-radius: 10px;
 }
 
 .text-dark{
@@ -59,10 +61,15 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: var(--btn-colors);
     -webkit-background-clip: text;
+    /* border-radius: 2%; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.border-shadow:hover{
+    background-color: var(--dark);
 }
 
 #header nav{
@@ -216,17 +223,44 @@ table{
 #add_user .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color:#16db93; 
+    background-color: transparent; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
     cursor: pointer;
     border-radius: .2em;
     margin: .5em 0;
+    color: var(--btn-colors);
+    border: 1px solid var(--border-btn);
+    border-radius: 8px;
 }
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
+}
+
+.headerCustom3{
+    background-color: #783937FF !important;
+    color: #fff;
+}
+
+.headerCustom0{
+    margin-top: 2rem;
+}
+
+.backgroundCustom{
+    background-color: rgb(253, 251, 247);
+}
+
+.custom1{
+  border: 1px solid var(--border-btn);
+  border-radius: 8px;
+  padding: 0.8rem;
+  background-color: transparent;
+  color: var(--btn-colors);
+}
+.custom1:hover{
+    background-color: var(--dark);
 }
